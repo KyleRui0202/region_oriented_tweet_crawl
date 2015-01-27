@@ -36,8 +36,8 @@ query_list_2 = ["", " New York", " NY", " N.Y."]
 # Combine search query lists
 query_list = [(query_1, query_2) for query_1 in query_list_1 for query_2 in query_list_2]
 
-# Get the "focus" user's friends
-albany_users_tweets = set([])
+# Initialize the set od tweets
+users_tweets = set([])
 
 for query in query_list:
     
@@ -71,13 +71,13 @@ for query in query_list:
                             hashtags = [hashtag["text"] for hashtag in user["status"]["entities"]["hashtags"]]
                             urls = [url["url"] for url in user["status"]["entities"]["urls"]]
                             
-                            albany_users_tweets.add((user["id_str"], user["status"]["created_at"], user["status"]["text"],\
+                            users_tweets.add((user["id_str"], user["status"]["created_at"], user["status"]["text"],\
                                                       tuple(user_mentions), tuple(hashtags),tuple(urls)))
 
         if any_match == False:
             break
 
-print "New tweets number: ", str(len(albany_users_tweets))
+print "New tweets number: ", str(len(users_tweets))
 # print json.dumps(albany_users_tweets, indent=1)
 
 fo = open("[city name]_users_tweets.txt", "w+")
