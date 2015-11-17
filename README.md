@@ -22,11 +22,11 @@ Next, make sure to install the required Python package "twitter". We use pip to 
 pip install twitter
 ```
 
-You may also install it from its GitGub repository: https://github.com/sixohsix/twitter.git. You can learn more about pip [here](https://pypi.python.org/pypi/pip).
+You may also install it from its GitHub repository: https://github.com/sixohsix/twitter.git. You can learn more about pip [here](https://pypi.python.org/pypi/pip).
 
 ## Configuration
 
-Before running the tookit you have to configure it properly:
+Before running the toolkit you have to configure it properly:
 
 First, set the required OAuth credentials for your Twitter App:
 
